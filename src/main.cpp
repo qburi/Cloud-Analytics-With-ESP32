@@ -56,7 +56,7 @@ void setup() {
 void loop() {
   ArduinoCloud.update(); // Keeps the connection alive
 
-  // --- [RE-ADDED] Check if it's time to read local sensors ---
+  // Check if it's time to read local sensors ---
   // This timer runs independently of the cloud settings.
   if (millis() - lastSensorRead > sensorReadInterval) {
     lastSensorRead = millis();
